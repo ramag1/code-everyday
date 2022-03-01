@@ -51,25 +51,28 @@
 // * With `name` not given 
 //   or `name` = ""        => return "Hello, World!"
 
-// function hello(name) {
-//     if (name.length > 0) {
-// 	    return 'Hello, ' + name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-//     } else {
-//         return 'Hello, World!'
-//     }
-// }
-// console.log(hello(''));
 
-function hello(name) {
-	if (name !== '') {
-		return (
-			'Hello, ' +
-			name.charAt(0).toUpperCase() +
-			name.slice(1).toLowerCase() +
-			'!'
-		);
-	} else {
-		return 'Hello, World!';
-	}
-}
-console.log(hello('asdflLASDKLIONG'));
+// function hello(name) {
+// 	if (name !== '') {
+// 		return (
+// 			'Hello, ' +
+// 			name.charAt(0).toUpperCase() +
+// 			name.slice(1).toLowerCase() +
+// 			'!'
+// 		);
+// 	} else {
+// 		return 'Hello, World!';
+// 	}
+// }
+// console.log(hello('asdflLASDKLIONG'));
+
+
+const areaOrPerimeter = function (l, w) {
+	if (l === w) {
+        return l * 4;
+    } else {
+        return l *w;
+    }
+};
+
+console.log((areaOrPerimeter(4 , 4)));
