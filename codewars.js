@@ -1,34 +1,25 @@
-// function maskify(str) {
-// 	let arr = str.split(''); //split the string into an array
-// 	console.log(arr);
-// 	console.log(arr.length);
-// 	let newArr = []; //set up new array to push characters to
-// 	console.log(`new arr ${newArr}`);
+function maskify(str) {
+	let newArr = str.split('');
 
-// 	if (arr.length <= 4) {
-// 		return arr.join('');
-// 	} else {
-// 		for (let i = 0; i < arr.length; i++) {
-// 			if (arr[i].index < arr.length - 3) {
-// 				newArr.push('#');
-// 				console.log(newArr);
-// 			} else {
-// 				newArr.push(arr[i]);
-// 				console.log(`new array ${newArr}`);
-// 			}
-// 			let newStr = newArr.join('');
-// 			console.log(` newstr ${newStr}`);
-// 		}
-// 	}
-// }
+	let maskArr = [];
+	for (i = 0; i < newArr.length; i++) {
+		if (i < newArr.length - 4) {
+			maskArr[i] = '#';
+		} else {
+			maskArr[i] = newArr[i];
+		}
+	}
+	let mask = maskArr.join('');
+	return mask;
+}
 
-// maskify('12334623465');
+console.log(maskify('123344578098698665587'));
 
 // function numberToString(num) {
 //     return String(num)
 // }
 
-// numberToString(12345)
+// console.log(numberToString(12345))
 
 // function remainder(n, m) {
 // 	if (n > m) {
@@ -38,8 +29,6 @@
 //     }
 // }
 
-
-
 // Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
 
 // Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
@@ -48,9 +37,8 @@
 
 // * With `name` = "john"  => return "Hello, John!"
 // * With `name` = "aliCE" => return "Hello, Alice!"
-// * With `name` not given 
+// * With `name` not given
 //   or `name` = ""        => return "Hello, World!"
-
 
 // function hello(name) {
 // 	if (name !== '') {
@@ -66,13 +54,12 @@
 // }
 // console.log(hello('asdflLASDKLIONG'));
 
+// const areaOrPerimeter = function (l, w) {
+// 	if (l === w) {
+//         return l * 4;
+//     } else {
+//         return l *w;
+//     }
+// };
 
-const areaOrPerimeter = function (l, w) {
-	if (l === w) {
-        return l * 4;
-    } else {
-        return l *w;
-    }
-};
-
-console.log((areaOrPerimeter(4 , 4)));
+// console.log((areaOrPerimeter(4 , 4)));
