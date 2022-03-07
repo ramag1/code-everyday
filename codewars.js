@@ -1,19 +1,19 @@
-function maskify(str) {
-	let newArr = str.split('');
+// function maskify(str) {
+// 	let newArr = str.split('');
 
-	let maskArr = [];
-	for (i = 0; i < newArr.length; i++) {
-		if (i < newArr.length - 4) {
-			maskArr[i] = '#';
-		} else {
-			maskArr[i] = newArr[i];
-		}
-	}
-	let mask = maskArr.join('');
-	return mask;
-}
+// 	let maskArr = [];
+// 	for (i = 0; i < newArr.length; i++) {
+// 		if (i < newArr.length - 4) {
+// 			maskArr[i] = '#';
+// 		} else {
+// 			maskArr[i] = newArr[i];
+// 		}
+// 	}
+// 	let mask = maskArr.join('');
+// 	return mask;
+// }
 
-console.log(maskify('123344578098698665587'));
+// console.log(maskify('123344578098698665587'));
 
 // function numberToString(num) {
 //     return String(num)
@@ -63,3 +63,17 @@ console.log(maskify('123344578098698665587'));
 // };
 
 // console.log((areaOrPerimeter(4 , 4)));
+
+const ReverseString = (str) => {
+	let arr = str.split('');
+	let newArr = [];
+	for (let i = arr.length - 1; i > -1; i--) {
+		newArr.push(arr[i]);
+	}
+	// console.log(newArr);
+	let rev = newArr.join('');
+	console.log(rev);
+	return rev;
+};
+
+ReverseString('Hello I am Rachel');
