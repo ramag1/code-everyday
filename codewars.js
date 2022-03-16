@@ -161,23 +161,39 @@
 //return the array
 
 
-function lovefunc(flower1, flower2) {
-	let flow1;
-	let flow2;
-	if (flower1 % 2 === 0) {
-		flow1 = true
-	} else {
-		flow1 = false
-	} 
-	if (flower2 % 2 === 0) {
-		flow2 = true;
-	} else {
-		flow2 = false;
-	} 
-	if (flow1 === flow2) {
-		return false
-	} else {
-		return true
-	}
-}
+// function lovefunc(flower1, flower2) {
+// 	let flow1;
+// 	let flow2;
+// 	if (flower1 % 2 === 0) {
+// 		flow1 = true
+// 	} else {
+// 		flow1 = false
+// 	} 
+// 	if (flower2 % 2 === 0) {
+// 		flow2 = true;
+// 	} else {
+// 		flow2 = false;
+// 	} 
+// 	if (flow1 === flow2) {
+// 		return false
+// 	} else {
+// 		return true
+// 	}
+// }
 
+function solution(digits) {
+	let biggestnum = [];
+	for (let i = 0; i < digits.length - 4; i++) {
+		let elements = [
+			parseInt(digits[i]),
+			parseInt(digits[i + 1]),
+			parseInt(digits[i + 2]),
+			parseInt(digits[i + 3]),
+			parseInt(digits[i + 4]),
+		];
+		let joined = elements.join('');
+		biggestnum.push(parseInt(joined));
+	}
+	biggestnum.sort();
+	return biggestnum[biggestnum.length - 1];
+}
