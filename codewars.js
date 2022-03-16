@@ -147,15 +147,37 @@
 // console.log(firstRecurringCharacter2([1, 5, 5, 1, 3, 4, 6]));
 
 
-function powersOfTwo(n) {
-	let answerArray = [1];
-	for (let i = 1; i <= n; i++) {
-		answerArray.push(2 ** i);
-	}
-	return answerArray;
-}
+// function powersOfTwo(n) {
+// 	let answerArray = [1];
+// 	for (let i = 1; i <= n; i++) {
+// 		answerArray.push(2 ** i);
+// 	}
+// 	return answerArray;
+// }
 
 //function takes 1 input, a number
 //create a for loop that iterates up to the value of input
 //for each iteration, push 2^i to the array
 //return the array
+
+
+function lovefunc(flower1, flower2) {
+	let flow1;
+	let flow2;
+	if (flower1 % 2 === 0) {
+		flow1 = true
+	} else {
+		flow1 = false
+	} 
+	if (flower2 % 2 === 0) {
+		flow2 = true;
+	} else {
+		flow2 = false;
+	} 
+	if (flow1 === flow2) {
+		return false
+	} else {
+		return true
+	}
+}
+
