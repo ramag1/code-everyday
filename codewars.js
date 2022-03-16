@@ -120,17 +120,17 @@
 // }
 
 // returnRecurring([1, 2, 4, 3, 1, 5, 3, 4]);
-function firstRecurringCharacter(input) {
-	for (let i = 0; i < input.length; i++) {
-		for (let j = i + 1; j < input.length; j++) {
-			if (input[i] === input[j]) {
-				return input[i];
-			}
-		}
-	}
-	return undefined;
-}
-console.log(firstRecurringCharacter([1, 5, 5, 1, 3, 4, 6]));
+// function firstRecurringCharacter(input) {
+// 	for (let i = 0; i < input.length; i++) {
+// 		for (let j = i + 1; j < input.length; j++) {
+// 			if (input[i] === input[j]) {
+// 				return input[i];
+// 			}
+// 		}
+// 	}
+// 	return undefined;
+// }
+// console.log(firstRecurringCharacter([1, 5, 5, 1, 3, 4, 6]));
 
 // function firstRecurringCharacter2(input) {
 // 	let map = {};
@@ -145,3 +145,17 @@ console.log(firstRecurringCharacter([1, 5, 5, 1, 3, 4, 6]));
 // 	return undefined;
 // }
 // console.log(firstRecurringCharacter2([1, 5, 5, 1, 3, 4, 6]));
+
+
+function powersOfTwo(n) {
+	let answerArray = [1];
+	for (let i = 1; i <= n; i++) {
+		answerArray.push(2 ** i);
+	}
+	return answerArray;
+}
+
+//function takes 1 input, a number
+//create a for loop that iterates up to the value of input
+//for each iteration, push 2^i to the array
+//return the array
