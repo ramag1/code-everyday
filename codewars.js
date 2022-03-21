@@ -211,6 +211,20 @@
 
 // console.log(partlist(["az", "toto", "picaro", "zone", "kiwi"]))
 
-function filter_list(l) {
-	return l.filter(Number.isInteger);
-}
+// function filter_list(l) {
+// 	return l.filter(Number.isInteger);
+// }
+
+// function shortcut(str) {
+// 	const newStrArr = str.split('');
+// 	const vowels = ['a', 'e', 'i', 'o', 'u'];
+// 	const vowelFreeArr = [];
+// 	console.log(newStrArr);
+// 	for (let i = 0; i < newStrArr.length; i++) {
+// 		if (!vowels.includes(newStrArr[i])) {
+// 			vowelFreeArr.push(newStrArr[i]);
+// 		}
+// 	}
+// 	console.log(vowelFreeArr);
+// 	return vowelFreeArr.join('');
+// }
