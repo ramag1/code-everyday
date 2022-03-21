@@ -181,19 +181,36 @@
 // 	}
 // }
 
-function solution(digits) {
-	let biggestnum = [];
-	for (let i = 0; i < digits.length - 4; i++) {
-		let elements = [
-			parseInt(digits[i]),
-			parseInt(digits[i + 1]),
-			parseInt(digits[i + 2]),
-			parseInt(digits[i + 3]),
-			parseInt(digits[i + 4]),
-		];
-		let joined = elements.join('');
-		biggestnum.push(parseInt(joined));
-	}
-	biggestnum.sort();
-	return biggestnum[biggestnum.length - 1];
+// function solution(digits) {
+// 	let biggestnum = [];
+// 	for (let i = 0; i < digits.length - 4; i++) {
+// 		let elements = [
+// 			parseInt(digits[i]),
+// 			parseInt(digits[i + 1]),
+// 			parseInt(digits[i + 2]),
+// 			parseInt(digits[i + 3]),
+// 			parseInt(digits[i + 4]),
+// 		];
+// 		let joined = elements.join('');
+// 		biggestnum.push(parseInt(joined));
+// 	}
+// 	biggestnum.sort();
+// 	return biggestnum[biggestnum.length - 1];
+// }
+
+// function partlist(arr) {
+//   let listArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     listArr.unshift(arr.splice(i, (arr.length - (i-1)),))
+//     console.log(listArr)
+//     // listArr.push(arr.slice(i))
+//     // console.log(listArr)
+//   }
+//   console.log(listArr)
+// }
+
+// console.log(partlist(["az", "toto", "picaro", "zone", "kiwi"]))
+
+function filter_list(l) {
+	return l.filter(Number.isInteger);
 }
