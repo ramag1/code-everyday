@@ -241,7 +241,23 @@
 // }
 // console.log(shortcut("hello"))
 
-function shortcut(string) {
-	const noVowels = string.replace(/[aeiou]/gi, ''); // open an dclosing slashes indicate beginning and end of regular expression. the [] brackets are called a character class that serves as the criteria for what we are looking for, the g means global flag so that it does not stop at just the first occurance, and the i flag makes this non case sensitive
-	return noVowels;
+// function shortcut(string) {
+// 	const noVowels = string.replace(/[aeiou]/gi, ''); // open an dclosing slashes indicate beginning and end of regular expression. the [] brackets are called a character class that serves as the criteria for what we are looking for, the g means global flag so that it does not stop at just the first occurance, and the i flag makes this non case sensitive
+// 	return noVowels;
+// }
+
+function swap(str) {
+	let newTxt = '';
+	str.split('').map((e) => {
+		//grab string, split to array, then map
+		if (e == e.toUpperCase()) {
+			//if each is equal to upper
+			newTxt += e.toLowerCase(); //add it to newTxt string as lowercase
+		} else {
+			newTxt += e.toUpperCase(); //reverse from above
+		}
+	});
+	return newTxt; //return the new string
 }
+
+console.log(swap('Hello THERE! We Have A GREAT DaY!'));
