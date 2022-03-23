@@ -246,18 +246,30 @@
 // 	return noVowels;
 // }
 
-function swap(str) {
-	let newTxt = '';
-	str.split('').map((e) => {
-		//grab string, split to array, then map
-		if (e == e.toUpperCase()) {
-			//if each is equal to upper
-			newTxt += e.toLowerCase(); //add it to newTxt string as lowercase
-		} else {
-			newTxt += e.toUpperCase(); //reverse from above
-		}
-	});
-	return newTxt; //return the new string
+// function swap(str) {
+// 	let newTxt = '';
+// 	str.split('').map((e) => {
+// 		//grab string, split to array, then map
+// 		if (e == e.toUpperCase()) {
+// 			//if each is equal to upper
+// 			newTxt += e.toLowerCase(); //add it to newTxt string as lowercase
+// 		} else {
+// 			newTxt += e.toUpperCase(); //reverse from above
+// 		}
+// 	});
+// 	return newTxt; //return the new string
+// }
+
+// console.log(swap('Hello THERE! We Have A GREAT DaY!'));
+
+function vowelChange(str, vow) {
+	let replace = str.replace(/[aeiou]/gi, vow);
+	return replace;
 }
 
-console.log(swap('Hello THERE! We Have A GREAT DaY!'));
+console.log(
+	vowelChange(
+		'Hannah Hannah bo-bannah Banana fanna fo-fannah Fee, fy, mo-mannah. Hannah!',
+		'i'
+	)
+);
