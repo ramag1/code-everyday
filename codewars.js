@@ -262,14 +262,22 @@
 
 // console.log(swap('Hello THERE! We Have A GREAT DaY!'));
 
-function vowelChange(str, vow) {
-	let replace = str.replace(/[aeiou]/gi, vow);
-	return replace;
+// function vowelChange(str, vow) {
+// 	let replace = str.replace(/[aeiou]/gi, vow);
+// 	return replace;
+// }
+
+// console.log(
+// 	vowelChange(
+// 		'Hannah Hannah bo-bannah Banana fanna fo-fannah Fee, fy, mo-mannah. Hannah!',
+// 		'i'
+// 	)
+// );
+
+function spacify(str) {
+	let arr = str.split('');
+	let spaceStr = arr.join(' ');
+	return spaceStr;
 }
 
-console.log(
-	vowelChange(
-		'Hannah Hannah bo-bannah Banana fanna fo-fannah Fee, fy, mo-mannah. Hannah!',
-		'i'
-	)
-);
+console.log(spacify('hello there'));
