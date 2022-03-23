@@ -228,3 +228,20 @@
 // 	console.log(vowelFreeArr);
 // 	return vowelFreeArr.join('');
 // }
+
+// function shortcut (string) {
+// 	let newStr;
+//   for (let i = 0; i < string.length; i++) {
+//     if (string[i] === 'a' || 'e' || 'i' || 'o' || 'u') {
+//       newStr = string.substr(i)
+//       console.log(newStr)
+//     }
+// 	return newStr
+//   }
+// }
+// console.log(shortcut("hello"))
+
+function shortcut(string) {
+	const noVowels = string.replace(/[aeiou]/gi, ''); // open an dclosing slashes indicate beginning and end of regular expression. the [] brackets are called a character class that serves as the criteria for what we are looking for, the g means global flag so that it does not stop at just the first occurance, and the i flag makes this non case sensitive
+	return noVowels;
+}
