@@ -257,19 +257,32 @@
 
 // console.log(spacify('hello there'));
 
-function kebabize(str) {
-	let kebab = '';
-	const nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-	str.split('').map((l) => {
-		if (nums.includes(l)) {
-			kebab += '';
-		} else if (l == str.charAt(0)) {
-			kebab += l.toLowerCase();
-		} else if (l == l.toUpperCase()) {
-			kebab += '-' + l.toLowerCase();
+// function kebabize(str) {
+// 	let kebab = '';
+// 	const nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+// 	str.split('').map((l) => {
+// 		if (nums.includes(l)) {
+// 			kebab += '';
+// 		} else if (l == str.charAt(0)) {
+// 			kebab += l.toLowerCase();
+// 		} else if (l == l.toUpperCase()) {
+// 			kebab += '-' + l.toLowerCase();
+// 		} else {
+// 			kebab += l;
+// 		}
+// 	});
+// 	return kebab;
+// }
+
+function shortcut(string) {
+	const vowels = ['a', 'e', 'i', 'o', 'u'];
+	let noVowels = '';
+	string.split('').map((l) => {
+		if (vowels.includes(l)) {
+			noVowels += '';
 		} else {
-			kebab += l;
+			noVowels += l;
 		}
 	});
-	return kebab;
+	return noVowels;
 }
