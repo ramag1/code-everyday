@@ -274,15 +274,25 @@
 // 	return kebab;
 // }
 
-function shortcut(string) {
-	const vowels = ['a', 'e', 'i', 'o', 'u'];
-	let noVowels = '';
-	string.split('').map((l) => {
-		if (vowels.includes(l)) {
-			noVowels += '';
-		} else {
-			noVowels += l;
-		}
-	});
-	return noVowels;
+// function shortcut(string) {
+// 	const vowels = ['a', 'e', 'i', 'o', 'u'];
+// 	let noVowels = '';
+// 	string.split('').map((l) => {
+// 		if (vowels.includes(l)) {
+// 			noVowels += '';
+// 		} else {
+// 			noVowels += l;
+// 		}
+// 	});
+// 	return noVowels;
+// }
+
+function reverseWords(str) {
+	let arr = str.split(' ');
+	let revArr = [];
+	for (let i = arr.length - 1; i >= 0; i--) {
+		revArr.push(arr[i]);
+	}
+	let final = revArr.join(' ');
+	return final;
 }
