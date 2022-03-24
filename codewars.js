@@ -215,31 +215,6 @@
 // 	return l.filter(Number.isInteger);
 // }
 
-// function shortcut(str) {
-// 	const newStrArr = str.split('');
-// 	const vowels = ['a', 'e', 'i', 'o', 'u'];
-// 	const vowelFreeArr = [];
-// 	console.log(newStrArr);
-// 	for (let i = 0; i < newStrArr.length; i++) {
-// 		if (!vowels.includes(newStrArr[i])) {
-// 			vowelFreeArr.push(newStrArr[i]);
-// 		}
-// 	}
-// 	console.log(vowelFreeArr);
-// 	return vowelFreeArr.join('');
-// }
-
-// function shortcut (string) {
-// 	let newStr;
-//   for (let i = 0; i < string.length; i++) {
-//     if (string[i] === 'a' || 'e' || 'i' || 'o' || 'u') {
-//       newStr = string.substr(i)
-//       console.log(newStr)
-//     }
-// 	return newStr
-//   }
-// }
-// console.log(shortcut("hello"))
 
 // function shortcut(string) {
 // 	const noVowels = string.replace(/[aeiou]/gi, ''); // open an dclosing slashes indicate beginning and end of regular expression. the [] brackets are called a character class that serves as the criteria for what we are looking for, the g means global flag so that it does not stop at just the first occurance, and the i flag makes this non case sensitive
@@ -274,10 +249,27 @@
 // 	)
 // );
 
-function spacify(str) {
-	let arr = str.split('');
-	let spaceStr = arr.join(' ');
-	return spaceStr;
-}
+// function spacify(str) {
+// 	let arr = str.split('');
+// 	let spaceStr = arr.join(' ');
+// 	return spaceStr;
+// }
 
-console.log(spacify('hello there'));
+// console.log(spacify('hello there'));
+
+function kebabize(str) {
+	let kebab = '';
+	const nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+	str.split('').map((l) => {
+		if (nums.includes(l)) {
+			kebab += '';
+		} else if (l == str.charAt(0)) {
+			kebab += l.toLowerCase();
+		} else if (l == l.toUpperCase()) {
+			kebab += '-' + l.toLowerCase();
+		} else {
+			kebab += l;
+		}
+	});
+	return kebab;
+}
