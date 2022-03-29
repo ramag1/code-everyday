@@ -99,12 +99,17 @@
 // mergeSortedArrays([0, 3, 4, 31], [3, 4, 6, 30]);
 
 // function twoSum(numbers, target) {
-// 	for (var i = 0; i < numbers.length - 1; i++) {
-// 		for (var j = i + 1; j < numbers.length; j++) {
-// 			if (numbers[i] + numbers[j] === target) return [i, j];
+// 	for (let i = 0; i < numbers.length - 1; i++) {
+// 		//this iterates through one less so you are not counting the same index twice
+// 		for (let j = i + 1; j < numbers.length; j++) {
+// 			if (numbers[i] + numbers[j] === target) {
+// 				return [i, j];
+// 			}
 // 		}
 // 	}
 // }
+
+// console.log(twoSum([1, 2, 3, 10], 13));
 
 // function returnRecurring(input) {
 // 	let map = {};
@@ -287,12 +292,27 @@
 // 	return noVowels;
 // }
 
-function reverseWords(str) {
-	let arr = str.split(' ');
-	let revArr = [];
-	for (let i = arr.length - 1; i >= 0; i--) {
-		revArr.push(arr[i]);
+// function reverseWords(str) {
+// 	let arr = str.split(' ');
+// 	let revArr = [];
+// 	for (let i = arr.length - 1; i >= 0; i--) {
+// 		revArr.push(arr[i]);
+// 	}
+// 	let final = revArr.join(' ');
+// 	return final;
+// }
+
+function palindrome(num) {
+	let reverse;
+	if (typeof num === 'number' && num > 0) {
+		let reverseNum = (num + '').split('').reverse().join('');
+		reverse = parseInt(reverseNum);
+		if (reverse === num) {
+			return true;
+		} else {
+			return false;
+		}
+	} else {
+		return 'Not valid';
 	}
-	let final = revArr.join(' ');
-	return final;
-}
+} 
